@@ -1,0 +1,143 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>AchouMais — Achados que valem a pena</title>
+  <meta name="description" content="Curadoria de produtos úteis e ofertas rápidas. Clique e vá direto para a loja." />
+  <meta name="theme-color" content="#F6F7F9" />
+
+  <!-- GA4 (troque pelo ID do AchouMais) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEU_ID_AQUI"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SEU_ID_AQUI', { anonymize_ip: true });
+  </script>
+
+  <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <!-- TOP (Header full-width) + HERO -->
+  <section class="topHero" id="topo">
+
+    <!-- HEADER (FULL-WIDTH) -->
+    <header class="siteHeader">
+      <div class="headerInner">
+        <a class="brand" href="#topo" aria-label="Ir para o topo">
+          <img class="brandLogo" src="assets/img/logo-achoumais.jpg" alt="AchouMais">
+          <div class="brandTxt">
+            <span class="brandName">AchouMais</span>           
+          </div>
+        </a>
+
+        <div class="headerFollow" aria-label="Siga o AchouMais">  
+
+          <a class="socialBtn" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+            <span class="socialIcon ig" aria-hidden="true"></span>
+          </a>
+
+          <a class="socialBtn" href="#" target="_blank" rel="noopener" aria-label="TikTok">
+            <span class="socialIcon tt" aria-hidden="true"></span>
+          </a>
+
+          <a class="socialBtn" href="#" target="_blank" rel="noopener" aria-label="YouTube">
+            <span class="socialIcon yt" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO (dentro do container) -->
+    <div class="wrap">
+      <section class="heroPro">
+        <div class="heroProLeft">
+        
+          <h2 class="heroTitlePro">Achou, clicou, economizou.</h2>
+
+          <p class="heroTextPro">
+            Achados úteis, bem avaliados e de vendedores confiáveis.
+          </p>
+
+          <div class="heroTrust">
+            <div class="trustItem">✅ Links oficiais</div>
+            <div class="trustItem">⚡ Rápido e simples</div>
+            <div class="trustItem">🏷️ Foco em custo-benefício</div>
+          </div>
+        </div>
+
+        <div class="heroProRight">
+          <div class="dealCard">
+            <div class="dealTop">
+              <span class="dealPill">Achado do dia</span>              
+            </div>
+
+            <div class="dealMain">
+              <div class="dealImg" id="dailyImg" aria-hidden="true"></div>
+
+              <div class="dealInfo">
+                <div class="dealName" id="dailyName">Nome do Produto</div>
+                <div class="dealDesc" id="dailyDesc">Descrição curta do produto do dia.</div>
+              </div>
+            </div>
+
+            <div class="dealActions" id="dailyActions"></div>
+
+            <p class="dealNote">
+              Links podem conter comissão. Preço e disponibilidade são responsabilidade da loja.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <main class="wrap">
+    <section class="section" id="produtos" aria-label="Listagem de Produtos">
+      <div class="sectionHead">
+        <div class="sectionHeadRow">
+          <div class="sectionHeadLeft">
+            <h3>Produtos</h3>
+          </div>
+
+          <div class="sectionHeadRight">
+            <input
+              id="searchInput"
+              class="searchInput"
+              type="search"
+              placeholder="Buscar produto..."
+              aria-label="Buscar produto..."
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid" id="productsGrid" aria-live="polite"></div>
+      <div id="pagination" class="pagination"></div>
+
+      <div class="note" id="avisos">
+        <strong>Aviso:</strong> preços e disponibilidade são responsabilidade das lojas. Links podem conter comissão.
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER FULL-WIDTH -->
+  <footer class="footer">
+    <div class="footerInner">
+      <div>© <span id="year"></span> AchouMais</div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

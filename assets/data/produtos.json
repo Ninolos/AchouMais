@@ -1,0 +1,82 @@
+[
+  {
+    "id": "colchao-inflavel",
+    "title": "Colchão Inflável Casal com Inflador Acoplado (Camping Mor)",
+    "description": "PVC resistente, superfície aveludada e inflador acoplado. Ótimo para visitas e camping.",
+    "category": "Casa",
+    "badge": "Promo",
+    "imageUrl": "/assets/img/colchao-inflavel.webp",
+    "stores": [
+      {
+        "store": "ml",
+        "storeLabel": "Mercado Livre",
+        "affiliateUrl": "https://mercadolivre.com/sec/SEU_LINK_AQUI"
+      },
+      {
+        "store": "sp",
+        "storeLabel": "Shopee",
+        "affiliateUrl": "https://shope.ee/SEU_LINK_AQUI"
+      },
+      {
+        "store": "amz",
+        "storeLabel": "Amazon",
+        "affiliateUrl": "https://www.amazon.com.br/dp/XXXX?tag=SEU_TAG-20"
+      }
+    ]
+  },
+  {
+    "id": "camera-lampada-seguranca",
+    "title": "Câmera Lâmpada de Segurança 360°",
+    "description": "Imagem panorâmica, controle pelo celular, zoom e luz acionável remotamente.",
+    "category": "Casa",
+    "badge": "Em alta",
+    "imageUrl": "/assets/img/camera-seguranca.webp",
+    "stores": [
+      {
+        "store": "ml",
+        "storeLabel": "Mercado Livre",
+        "affiliateUrl": "https://mercadolivre.com/sec/SEU_LINK_AQUI"
+      },
+      {
+        "store": "sp",
+        "storeLabel": "Shopee",
+        "affiliateUrl": "https://shope.ee/SEU_LINK_AQUI"
+      }
+    ]
+  },
+  {
+    "id": "sacos-vacuo",
+    "title": "Kit 10 Sacos a Vácuo com Bomba Reutilizável",
+    "description": "Economiza espaço e organiza roupas e itens. Reutilizável e prático.",
+    "category": "Organização",
+    "badge": "Top",
+    "imageUrl": "/assets/img/sacos-vacuo.webp",
+    "stores": [
+      {
+        "store": "ml",
+        "storeLabel": "Mercado Livre",
+        "affiliateUrl": "https://mercadolivre.com/sec/SEU_LINK_AQUI"
+      },
+      {
+        "store": "amz",
+        "storeLabel": "Amazon",
+        "affiliateUrl": "https://www.amazon.com.br/dp/XXXX?tag=SEU_TAG-20"
+      }
+    ]
+  },
+  {
+    "id": "potes-acrilico",
+    "title": "Kit 4 Potes Acrílico 3,8L Organizador de Geladeira",
+    "description": "Organiza alimentos, verduras e itens com tampa. Visual limpo e empilhável.",
+    "category": "Cozinha",
+    "badge": "Promo",
+    "imageUrl": "/assets/img/potes-acrilico.webp",
+    "stores": [
+      {
+        "store": "ml",
+        "storeLabel": "Mercado Livre",
+        "affiliateUrl": "https://mercadolivre.com/sec/SEU_LINK_AQUI"
+      }
+    ]
+  }
+]

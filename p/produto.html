@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title id="pageTitle">Carregando… | AchouMais</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F7F7F5" />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <!-- GA4 (troque pelo ID do AchouMais) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEU_ID_AQUI"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SEU_ID_AQUI', { anonymize_ip: true });
+  </script>
+
+  <style>
+    .productWrap{
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 36px;
+    }
+    .productImg{
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 22px;
+      margin: 18px auto 14px;
+      border: 1px solid rgba(17,17,17,.10);
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      background: rgba(255,255,255,.65);
+    }
+    .countdownBox{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(17,17,17,.10);
+      background: rgba(255,255,255,.75);
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+      margin: 10px 0 14px;
+      font-weight: 900;
+      font-size: 13px;
+      color: rgba(17,17,17,.80);
+    }
+    .countNum{ min-width: 22px; display: inline-block; }
+    .smallMuted{
+      color: rgba(17,17,17,.65);
+      font-size: 13px;
+      line-height: 1.55;
+      margin: 0 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="productWrap">
+
+      <a class="brandLink" href="../index.html" style="justify-content:center; min-width: unset;">
+        <img class="logoImg" src="../assets/img/logo.png" alt="AchouMais" />
+        <div class="brandText">
+          <h1 style="margin:0">AchouMais</h1>
+          <p style="margin:4px 0 0">Curadoria • Utilidades • Ofertas</p>
+        </div>
+      </a>
+
+      <h2 class="heroTitle" id="productName" style="margin-top:18px; font-size:28px;"></h2>
+
+      <img class="productImg" id="productImg" loading="eager" />
+
+      <p class="smallMuted" id="productDesc"></p>
+
+      <div class="countdownBox" aria-live="polite">
+        Você será redirecionado para a loja oficial em <span class="countNum" id="count">5</span>s…
+      </div>
+
+      <a id="cta" class="btn btnPrimary" target="_blank" rel="noopener">
+        Abrir agora
+      </a>
+
+      <p class="note" style="margin-top:18px">
+        Este link pode conter comissão. Preço e disponibilidade são responsabilidade da loja.
+      </p>
+
+    </section>
+  </main>
+
+  <script src="../assets/js/produto.js"></script>
+</body>
+</html>
