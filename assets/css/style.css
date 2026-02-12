@@ -347,25 +347,55 @@ img{ max-width:100%; display:block; }
   grid-template-columns: 1fr;
   gap: 10px;
 }
+/* =========================
+   Unificar botões: Achado do dia = Grid
+========================= */
+
+/* Faz os links do Achado do dia herdarem o mesmo estilo da grid */
 .dealActions a{
+  /* reaproveita o visual do .btnSmall */
   width: 100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap: 10px;
   padding: 12px 14px;
   border-radius: 14px;
   border: 1px solid rgba(17,24,39,.12);
-  background: rgba(255,255,255,.92);
-  text-decoration:none;
+  text-decoration: none;
+  text-align: center;
   font-weight: 900;
+  font-size: 14px;
   box-shadow: var(--shadow-sm);
-  transition: transform .12s ease, box-shadow .12s ease;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  /* remove qualquer “cara” diferente */
+  background: rgba(255,255,255,.92);
+  color: rgba(17,24,39,.90);
 }
+
 .dealActions a:hover{
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
+
+/* Se o JS colocar classes por loja no Achado do dia, aqui já padroniza */
+.dealActions a.btnML{
+  background: rgba(244,197,66,.22);
+  color: rgba(95,72,0,.95);
+  border-color: rgba(244,197,66,.35);
+}
+.dealActions a.btnSP{
+  background: rgba(31,78,134,.10);
+  color: var(--primary-900);
+  border-color: rgba(31,78,134,.20);
+}
+.dealActions a.btnAMZ{
+  background: rgba(17,24,39,.06);
+  color: rgba(17,24,39,.90);
+  border-color: rgba(17,24,39,.12);
+}
+
 .dealActions a img{
   width: 22px;
   height: 22px;
@@ -449,20 +479,32 @@ img{ max-width:100%; display:block; }
   border-color: rgba(31,78,134,.18);
 }
 
+/* =========================
+   Imagens da GRID – sem corte
+========================= */
+
+/* Área fixa da imagem */
 .thumb{
   height: 220px;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(31,78,134,.18), transparent 52%),
-    radial-gradient(circle at 80% 25%, rgba(244,197,66,.18), transparent 55%),
-    rgba(246,247,249,.9);
-  border-bottom: 1px solid rgba(17,24,39,.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(246,247,249,.9);
 }
 
-/* se o JS usar thumbImg com background-image, mantém */
+/* Quando a imagem vem via background-image (JS) */
 .thumbImg{
-  background-size: cover;
+  background-size: contain !important; /* 🔥 NÃO CORTA */
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Se algum card usar <img> direto (fallback) */
+.thumb img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* 🔥 NÃO CORTA */
+  display: block;
 }
 
 .cardBody{ padding: 14px; }
@@ -511,6 +553,13 @@ img{ max-width:100%; display:block; }
   flex-wrap: wrap;
 }
 
+.cardActions a{
+  display: inline-flex;
+  align-items: center;      /* centraliza verticalmente */
+  justify-content: center;  /* centraliza o conjunto */
+  gap: 10px;
+}
+
 .btnSmall{
   width: 100%;
   padding: 12px 14px;
@@ -545,12 +594,34 @@ img{ max-width:100%; display:block; }
 
 /* Ícones de loja no botão (se existir no JS) */
 .storeIcon{
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
   margin-right: 8px;
   flex-shrink: 0;
   opacity: .9;
 }
+/* =========================
+   Logos/ícones das lojas: padrão bonito (grid + achado do dia)
+========================= */
+
+/* mesmo visual para ícones na grid e no achado do dia */
+.storeIcon,
+.dealActions a img{
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+
+  /* "badge" clean */
+  padding: 4px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.85);
+  border: 1px solid rgba(17,24,39,.10);
+  box-shadow: 0 6px 14px rgba(15,42,70,.08);
+}
+
+/* evita o ícone empurrar o texto (grid) */
+.storeIcon{ margin-right: 8px; flex: 0 0 auto; }
 
 /* Paginação */
 .pagination{
@@ -642,4 +713,38 @@ img{ max-width:100%; display:block; }
   display:flex;
   justify-content: center;
   gap: 12px;
+}
+
+.storeIcon{
+  width: 30px;
+  height: 30px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* aparência */
+  padding: 4px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.85);
+  border: 1px solid rgba(17,24,39,.10);
+  box-shadow: 0 6px 14px rgba(15,42,70,.08);
+
+  /* MUITO IMPORTANTE */
+  flex: 0 0 22px;   /* força largura fixa */
+  margin: 0;        /* remove qualquer desalinhamento */
+}
+
+/* imagem dentro do ícone */
+.storeIcon img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* texto do botão */
+.cardActions a span,
+.cardActions a{
+  line-height: 1; /* evita empurrar o ícone pra cima */
 }
