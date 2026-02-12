@@ -1,20 +1,21 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+  <base href="../">
   <meta charset="utf-8" />
   <title id="pageTitle">Carregando… | AchouMais</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#F7F7F5" />
+  <meta name="theme-color" content="#F6F7F9" />
 
   <link rel="stylesheet" href="../assets/css/style.css" />
 
   <!-- GA4 (troque pelo ID do AchouMais) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SEU_ID_AQUI"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ0656CFXH"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-SEU_ID_AQUI', { anonymize_ip: true });
+    gtag('config', 'G-HZ0656CFXH', { anonymize_ip: true });
   </script>
 
   <style>
@@ -24,17 +25,20 @@
       text-align: center;
       padding-top: 36px;
     }
+
     .productImg{
       width: 100%;
       max-width: 360px;
       aspect-ratio: 1 / 1;
-      object-fit: cover;
+      object-fit: contain; /* ✅ não corta */
       border-radius: 22px;
       margin: 18px auto 14px;
-      border: 1px solid rgba(17,17,17,.10);
-      box-shadow: 0 14px 30px rgba(0,0,0,.10);
-      background: rgba(255,255,255,.65);
+      border: 1px solid rgba(17,24,39,.10);
+      box-shadow: 0 14px 30px rgba(15,42,70,.10);
+      background: rgba(255,255,255,.75);
+      padding: 12px; /* dá “respiro” p/ imagem não colar */
     }
+
     .countdownBox{
       display: inline-flex;
       align-items: center;
@@ -42,20 +46,60 @@
       gap: 8px;
       padding: 10px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(17,17,17,.10);
+      border: 1px solid rgba(17,24,39,.10);
       background: rgba(255,255,255,.75);
-      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+      box-shadow: 0 10px 22px rgba(15,42,70,.06);
       margin: 10px 0 14px;
       font-weight: 900;
       font-size: 13px;
-      color: rgba(17,17,17,.80);
+      color: rgba(17,24,39,.80);
     }
+
     .countNum{ min-width: 22px; display: inline-block; }
+
     .smallMuted{
-      color: rgba(17,17,17,.65);
+      color: rgba(17,24,39,.65);
       font-size: 13px;
       line-height: 1.55;
       margin: 0 0 10px;
+    }
+
+    /* “Logo + nome” no topo do produto, no estilo do seu layout atual */
+    .brandLink{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .logoImg{
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid rgba(17,24,39,.10);
+      box-shadow: 0 10px 22px rgba(15,42,70,.10);
+      background: rgba(255,255,255,.75);
+    }
+    .brandText h1{
+      margin:0;
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: -.3px;
+      color: #0F2A46;
+    }
+    .brandText p{
+      margin:4px 0 0;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: rgba(17,24,39,.60);
+    }
+
+    /* CTA usando o visual do seu sistema (btnSmall + cores por loja) */
+    #cta.btnSmall{
+      max-width: 360px;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -64,17 +108,17 @@
   <main class="wrap">
     <section class="productWrap">
 
-      <a class="brandLink" href="../index.html" style="justify-content:center; min-width: unset;">
-        <img class="logoImg" src="../assets/img/logo.png" alt="AchouMais" />
+      <a class="brandLink" href="../index.html" style="min-width: unset;">
+        <img class="logoImg" src="../assets/img/logo-achoumais.jpg" alt="AchouMais" />
         <div class="brandText">
-          <h1 style="margin:0">AchouMais</h1>
-          <p style="margin:4px 0 0">Curadoria • Utilidades • Ofertas</p>
+          <h1>AchouMais</h1>
+          <p>Curadoria • Utilidades • Ofertas rápidas</p>
         </div>
       </a>
 
-      <h2 class="heroTitle" id="productName" style="margin-top:18px; font-size:28px;"></h2>
+      <h2 class="heroTitlePro" id="productName" style="margin-top:18px; font-size:28px;"></h2>
 
-      <img class="productImg" id="productImg" loading="eager" />
+      <img class="productImg" id="productImg" loading="eager" alt="" />
 
       <p class="smallMuted" id="productDesc"></p>
 
@@ -82,12 +126,13 @@
         Você será redirecionado para a loja oficial em <span class="countNum" id="count">5</span>s…
       </div>
 
-      <a id="cta" class="btn btnPrimary" target="_blank" rel="noopener">
+      <!-- ✅ CTA com o MESMO padrão dos botões da grid -->
+      <a id="cta" class="btnSmall" target="_blank" rel="noopener">
         Abrir agora
       </a>
 
       <p class="note" style="margin-top:18px">
-        Este link pode conter comissão. Preço e disponibilidade são responsabilidade da loja.
+        Links podem conter comissão. Preço e disponibilidade são responsabilidade da loja.
       </p>
 
     </section>
