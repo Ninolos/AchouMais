@@ -1,33 +1,8 @@
 [
   {
-    "id": "colchao-inflavel",
-    "title": "Colchão Inflável Casal com Inflador Acoplado (Camping Mor)",
-    "description": "PVC resistente, superfície aveludada e inflador acoplado. Ótimo para visitas e camping.",
-    "category": "Casa",
-    "badge": "Promo",
-    "imageUrl": "assets/img/colchao-inflavel.webp",
-    "stores": [
-      {
-        "store": "ml",
-        "storeLabel": "Mercado Livre",
-        "affiliateUrl": "https://mercadolivre.com/sec/SEU_LINK_AQUI"
-      },
-      {
-        "store": "sp",
-        "storeLabel": "Shopee",
-        "affiliateUrl": "https://shope.ee/SEU_LINK_AQUI"
-      },
-      {
-        "store": "amz",
-        "storeLabel": "Amazon",
-        "affiliateUrl": "https://www.amazon.com.br/dp/XXXX?tag=SEU_TAG-20"
-      }
-    ]
-  },
-  {
     "id": "camera-lampada-seguranca",
-    "title": "Câmera Lâmpada de Segurança 360°",
-    "description": "Imagem panorâmica, controle pelo celular, zoom e luz acionável remotamente.",
+    "title": "Câmera Ip A8 App Icsee Infravermelho Prova D'água Externa Wifi Hd",
+    "description": "Desfrute de imagens nítidas e detalhadas em tempo real, com a capacidade adicional de capturar áudio, garantindo uma vigilância completa e eficaz.",
     "category": "Casa",
     "badge": "Em alta",
     "imageUrl": "assets/img/camera-seguranca.webp",
@@ -35,12 +10,12 @@
       {
         "store": "ml",
         "storeLabel": "Mercado Livre",
-        "affiliateUrl": "https://mercadolivre.com/sec/SEU_LINK_AQUI"
+        "affiliateUrl": "https://mercadolivre.com/sec/1kaFaAF"
       },
       {
-        "store": "sp",
-        "storeLabel": "Shopee",
-        "affiliateUrl": "https://shope.ee/SEU_LINK_AQUI"
+        "store": "amz",
+        "storeLabel": "Amazon",
+        "affiliateUrl": "https://amzn.to/4cqeCEE"
       }
     ]
   }
