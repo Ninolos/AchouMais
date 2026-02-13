@@ -18,5 +18,20 @@
         "affiliateUrl": "https://amzn.to/4cqeCEE"
       }
     ]
+  }, 
+    {
+    "id": "oculos-ray-ban",
+    "title": "Óculos de sol Ray-Ban Highstreet Chris Standard armação de náilon cor matte black",
+    "description": "Projetado para cuidar da saúde dos olhos, o filtro solar protege dos raios UV. Desfrute do sol na praia e na montanha.",
+    "category": "Moda",
+    "badge": "Em alta",
+    "imageUrl": "assets/img/oculos-ray-ban.webp",
+    "stores": [
+      {
+        "store": "ml",
+        "storeLabel": "Mercado Livre",
+        "affiliateUrl": "https://mercadolivre.com/sec/2XH4RG3"
+      }
+    ]
   }
 ]
